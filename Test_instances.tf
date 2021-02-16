@@ -13,6 +13,6 @@ module "TestInstance" {
   num_instances = 3
   fault_domains = ["FAULT-DOMAIN-1", "FAULT-DOMAIN-2", "FAULT-DOMAIN-3"]
   display_names = ["hoge1", "hoge2", "hoge3"]
-  private_ips   = ["10.0.0.4", "10.0.0.5", "10.0.0.6"]
+  private_ips   = ["10.0.1.128", "10.0.1.129", "10.0.1.130"]
 
 }
