@@ -9,9 +9,11 @@ provider "oci" {
 }
 
 resource "oci_load_balancer_backend" "backendset" {
+  count            = length(var.instance_private_ips)
+
   load_balancer_id = var.load_balancer_id
   backendset_name  = var.backendset_name
-  ip_address       = var.instance_private_ips
+  ip_address       = var.instance_private_ips[count.index]
   port             = 80
   backup           = false
   drain            = false
