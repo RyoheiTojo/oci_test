@@ -3,9 +3,7 @@ variable "region" {}
 variable "num_instances" {}
 variable "compartment_ocid" {}
 variable "instance_shape" {}
-variable "display_names" {
-  type = list
-}
+variable "display_name_prefix" {}
 variable "private_ips" {
   type = list
 }

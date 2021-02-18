@@ -12,7 +12,7 @@ resource "oci_core_instance" "test_instance" {
   count               = var.num_instances
   availability_domain = data.oci_identity_availability_domain.ad.name
   compartment_id      = var.compartment_ocid
-  display_name        = var.display_names[count.index]
+  display_name        = "${format("%s%02d", var.display_name_prefix, count.index + 1)}"
   shape               = var.instance_shape
   fault_domain        = var.fault_domains[count.index]
 
