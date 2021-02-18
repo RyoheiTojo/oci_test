@@ -1,5 +1,5 @@
 module "Instances" {
-  source = "./modules/compute"
+  source = "../../modules/compute"
 
   compartment_ocid = var.compartment_ocid
   tenancy_ocid = var.tenancy_ocid
@@ -15,7 +15,7 @@ module "Instances" {
 }
 
 module "backendset" {
-  source = "./modules/loadbalancer"
+  source = "../../modules/loadbalancer"
 
   compartment_ocid = var.compartment_ocid
   tenancy_ocid = var.tenancy_ocid
