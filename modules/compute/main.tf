@@ -8,7 +8,7 @@ provider "oci" {
   region           = var.region
 }
 
-resource "oci_core_instance" "test_instance" {
+resource "oci_core_instance" "instances" {
   count               = var.num_instances
   availability_domain = data.oci_identity_availability_domain.ad.name
   compartment_id      = var.compartment_ocid

@@ -1,5 +1,5 @@
-module "TestInstance" {
-  source = "./modules/compute"
+module "Instances" {
+  source = "../../modules/compute"
 
   compartment_ocid = var.compartment_ocid
   tenancy_ocid = var.tenancy_ocid
@@ -13,3 +13,16 @@ module "TestInstance" {
   num_instances       = 2
   display_name_prefix = "hoge"
 }
+
+module "backendset" {
+  source = "../../modules/loadbalancer"
+
+  compartment_ocid = var.compartment_ocid
+  tenancy_ocid = var.tenancy_ocid
+  region = var.region
+
+  instance_private_ips = module.Instances.instance_ips
+  load_balancer_id = "ocid1.loadbalancer.oc1.iad.aaaaaaaahk3gisyr6xoqj7lwlvdrnxxqdg6co2z5ssxuglq5tb3wdgcm5auq"
+  backendset_name = "bs_lb_2021-0218-1138"
+}
+
