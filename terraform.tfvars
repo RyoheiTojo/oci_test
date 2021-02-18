@@ -1,0 +1,5 @@
+tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaag64ytv4bzyu2oifrvvmigc4mmthwggyz6bbdroeya7invpr55uja"
+region = "us-ashburn-1"
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaadgr62t4tjv3f4ngwpdxzde7cqqyzgy7zjjxmxctxh6utooh77pga"
+ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCJedWKkobbk4zk8IwYTqtBfjTKaEnI3q7ob3jpU+dOK7+8wl8o+qJhA9u66S1dvNXkE1n1BocjV2aiScIF67PROPaBjP0iFcXu2oRxRkCCzQX5RhrNNz04xiJJ1prE22UDYa3NHe8scRZBDRqeOf5MaeKZyCuC9s9o4610MI8DRCJM+dD1285YevRA4ncKdYNiV56Y8xI4lL5XuScoaw5XI3kd6RzTk/TivIWsSgnVV1+BJbPnZJR86/st+AmcuFDzXYVyKYNC80t0uoaBB1ETIBKmiZPwHS3F/F/iKMpPiQzG+vBCMGAY0SLlAQ+xhBVJc2PwxWx8Ix7lePqOUSib ssh-key-2021-01-28"
+
