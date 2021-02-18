@@ -4,12 +4,10 @@ variable "num_instances" {}
 variable "compartment_ocid" {}
 variable "instance_shape" {}
 variable "display_name_prefix" {}
-variable "private_ips" {
-  type = list
-}
 variable "subnet_ocid" {}
 variable "fault_domains" {
-  type = list
+  type    = list
+  default = ["FAULT-DOMAIN-1", "FAULT-DOMAIN-2", "FAULT-DOMAIN-3"]
 }
 variable "instance_image_ocid" {}
 variable "boot_volume_size_in_gbs" {

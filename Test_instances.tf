@@ -12,7 +12,4 @@ module "TestInstance" {
 
   num_instances       = 2
   display_name_prefix = "hoge"
-  fault_domains       = ["FAULT-DOMAIN-1", "FAULT-DOMAIN-2", "FAULT-DOMAIN-3"]
-  private_ips         = ["10.0.1.130", "10.0.1.131", "10.0.1.132"]
-
 }

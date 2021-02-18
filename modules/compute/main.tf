@@ -14,12 +14,11 @@ resource "oci_core_instance" "test_instance" {
   compartment_id      = var.compartment_ocid
   display_name        = "${format("%s%02d", var.display_name_prefix, count.index + 1)}"
   shape               = var.instance_shape
-  fault_domain        = var.fault_domains[count.index]
+  fault_domain        = var.fault_domains[count.index % length(var.fault_domains)]
 
   create_vnic_details {
     subnet_id        = var.subnet_ocid
     assign_public_ip = false
-    private_ip       = var.private_ips[count.index]
   }
 
   source_details {
