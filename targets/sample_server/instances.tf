@@ -14,7 +14,7 @@ module "Instances" {
   display_name_prefix = "hoge"
 }
 
-module "TestBackendset" {
+module "backendset" {
   source = "./modules/loadbalancer"
 
   compartment_ocid = var.compartment_ocid
